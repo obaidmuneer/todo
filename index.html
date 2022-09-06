@@ -6,37 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="container make-it-slow">
-        <div class="col1">
-            <div class="heading">
-                <h2>Grade Checker</h2>
-            </div>
-            <!-- <h2 class="heading">Grade Checker</h2> -->
-            <form onsubmit="total(); return false">
-                <input class="effect-8" placeholder="Islamiyat" type="text">
-                <input class="effect-8" placeholder="Math" type="text">
-                <input class="effect-8" placeholder="Computer" type="text">
-                <input class="effect-8" placeholder="English" type="text">
-                <input class="effect-8" placeholder="Science" type="text">
-                <button type="submit">Show Result</button>
-            </form>
-
+    <div class="container">
+        <div class="header">
+            <h2>Todo List</h2>
         </div>
-        <div class="col2">
-            <div class="heading2">
-                <h2 class="result">Result</h2>
-            </div>
-            <!-- <h2 class="result">Result</h2> -->
-            <h3 id="percentage">Percentage :</h3>
-            <h3 id="grade">Grade : </h3>
-            <h3 id="total">Total : </h3>
+        <div class="body">
+            <form id="todo" onsubmit="add(); return false">
+                <input class="item" type="text" id="item">
+                <button class="btn add itemButton" type="submit">Add</button>
+            </form>
+            <ul id="result">
+                <!-- <li>1</li> -->
+            </ul>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
