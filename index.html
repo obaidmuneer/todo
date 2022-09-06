@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form onsubmit="add(); return false">
-    <input type="text" id="item">
-    <button type="submit">Add</button>
-    <h3 >
-        <ul id="result" >
-        </ul>
-    </h3>
-
-    <script>
-        let item = document.querySelector('#item')
-        let result = document.querySelector('#result')
-        let list = []
-
-        function add() {
-            list.push(item.value)
-            result.innerHTML = ''
-            // console.log(list);
-            list.map((item,index) => {
-                // console.log(item);
-                result.innerHTML += `<li>${item}</li>`
-            })
-
-        }
-    </script>
-</form>
+    <form id="todo" onsubmit="add(); return false">
+        <input type="text" id="item">
+        <button type="submit">Add</button>
+    </form>
+    <ul id="result">
+    </ul>
+    <script src="./js/app.js"></script>
 </body>
+
 </html>
