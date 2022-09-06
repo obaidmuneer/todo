@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container make-it-slow">
+        <div class="col1">
+            <div class="heading">
+                <h2>Grade Checker</h2>
+            </div>
+            <!-- <h2 class="heading">Grade Checker</h2> -->
+            <form onsubmit="total(); return false">
+                <input class="effect-8" placeholder="Islamiyat" type="text">
+                <input class="effect-8" placeholder="Math" type="text">
+                <input class="effect-8" placeholder="Computer" type="text">
+                <input class="effect-8" placeholder="English" type="text">
+                <input class="effect-8" placeholder="Science" type="text">
+                <button type="submit">Show Result</button>
+            </form>
+
+        </div>
+        <div class="col2">
+            <div class="heading2">
+                <h2 class="result">Result</h2>
+            </div>
+            <!-- <h2 class="result">Result</h2> -->
+            <h3 id="percentage">Percentage :</h3>
+            <h3 id="grade">Grade : </h3>
+            <h3 id="total">Total : </h3>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
