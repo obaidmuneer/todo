@@ -15,19 +15,19 @@ function show() {
     result.innerHTML = ''
     list.map((item, index) => {
         // console.log(item);
-        let edit = `<input type="button" onclick="edit(${index})" value="Edit">`
-        let dlt = `<input type="button" onclick="dlt(${index})" value="Delete">`
-        result.innerHTML += `<li>${item} ${edit} ${dlt}</li>`
+        let edit = `<input class="btn button edit" type="button" onclick="edit(${index})" value="Edit">`
+        let dlt = `<input class="btn button delete" type="button" onclick="dlt(${index})" value="Delete">`
+        result.innerHTML += `<li> <div class="list" > ${item} </div> ${edit} ${dlt}</li>`
     })
 }
 
 function update(index) {
-    let btn = document.querySelector('#btn')
+    let updatebtn = document.querySelector('#updatebtn')
     list[index] = item.value
     console.log(list);
     show()
     item.value = ''
-    btn.remove()
+    updatebtn.remove()
 }
 
 function updateBtn(index) {
@@ -35,11 +35,11 @@ function updateBtn(index) {
 
     for (let i = 0; i < todo.children.length; i++) {
         const element = todo.children[i];
-        if (element.value === 'update') {
+        if (element.value === 'Update') {
             return
         }
     }
-    let button = `<input type="button" id="btn" onclick="update(${index})" value="update">`
+    let button = `<input type="button" class="btn update button" id="updatebtn" onclick="update(${index})" value="Update">`
     todo.insertAdjacentHTML('beforeend', button)
 
     // const button = document.createElement('input')
@@ -63,6 +63,6 @@ function edit(index) {
 
 
 function dlt(index) {
-    list.splice(index,1)
+    list.splice(index, 1)
     show()
 }
