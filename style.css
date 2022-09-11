@@ -61,9 +61,13 @@ body {
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
-.itemButton:hover{
+.itemButton:hover , .update:hover{
     border: 1px solid #4a0072;
     outline: none;
+}
+.itemButton:active ,.update:active{
+    padding: 0% 4% 0% 4%;
+    transition: padding 0.1s ease-in-out;
 }
 
 .list {
@@ -95,6 +99,10 @@ body {
 .edit:hover {
     border-radius: 2px;
     border: 2px solid #009624;
+}
+.edit:active , .delete:active{
+    padding: 0% 8% 0% 4%;
+    transition: padding 0.1s ease-in-out;
 }
 
 .delete {
